@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🙇 Sample</title>
+  <script src="t.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div>
+    <div class="b">.b1</div>
+    <div class="b">.b2</div>
+  </div>
+
+  <hr />
+
+  <div>
+    <div class="c">
+      <div class="d">
+        immediate children .d
+      </div>
+      <div class="e">
+        <div class="d">children .d</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var b = t('.b');
+    b.map(function(d) {
+      console.log(d);
+    });
+
+    var c = t('.c');
+    console.log(c.find('.d'));
+    console.log(c.find('> .d'));
+  </script>
+</body>
+</html>
