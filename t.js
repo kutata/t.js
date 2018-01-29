@@ -1,3 +1,5 @@
+'use strict';
+
 !function(root, factory) {
   root._$ = root.t = factory();
 }(this, function() {
