@@ -26,12 +26,14 @@
     </div>
   </div>
   <script>
-    var b = t('.b');
+    window.$ = t;
+
+    var b = $('.b');
     b.map(function(d) {
       console.log(d);
     });
 
-    var c = t('.c');
+    var c = $('.c');
     console.log(c.find('.d'));
     console.log(c.find('> .d'));
   </script>

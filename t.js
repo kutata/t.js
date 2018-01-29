@@ -1,11 +1,11 @@
 !function(root, factory) {
   root._$ = root.t = factory();
 }(this, function() {
-	var $ = function( selector ) {
-    return new $.prototype.selector( selector );
+  var t = function( selector ) {
+    return new t.prototype.selector( selector );
   }
 
-  $.prototype = $.prototype = {
+  t.prototype = t.prototype = {
     slice: Array.prototype.slice,
     map: Array.prototype.map,
 
@@ -33,11 +33,12 @@
     },
 
     find: function(selector) {
-      return $(this[0].querySelectorAll(':scope ' + selector));
+      return t(this[0].querySelectorAll(':scope ' + selector));
     },
+
   }
 
-  $.prototype.selector.prototype = $.prototype;
+  t.prototype.selector.prototype = t.prototype;
 
-  return $;
+  return t;
 });
