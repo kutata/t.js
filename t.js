@@ -27,6 +27,7 @@
 
       for (var i = 0; i < dom.length; i++) {
         self[i] = dom[i];
+        // self[i].prototype = t.prototype;
       }
 
       this.length = dom.length;
@@ -38,9 +39,22 @@
       return t(this[0].querySelectorAll(':scope ' + selector));
     },
 
+
   }
 
   t.prototype.selector.prototype = t.prototype;
+
+  t.css = function(dom, style) {
+    if (!dom.length)
+      dom = [dom]
+
+    style = JSON.stringify(style);
+    style = style.replace(/[{}"]/g, '').replace(/,/, ';');
+
+    for (var i = 0; i < dom.length; i++) {
+      dom[i].style.cssText = style;
+    }
+  }
 
   return t;
 });

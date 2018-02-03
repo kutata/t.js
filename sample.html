@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div id="a"></div>
+
+  <hr />
+
   <div>
     <div class="b">.b1</div>
     <div class="b">.b2</div>
@@ -36,6 +40,11 @@
     var c = $('.c');
     console.log(c.find('.d'));
     console.log(c.find('> .d'));
+
+    $.css(b, {
+      'color': 'purple',
+      'background': 'pink'
+    });
   </script>
 </body>
 </html>
