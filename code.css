@@ -1,0 +1,29 @@
+.code {
+  display: inline-block;
+  background: #181d22;
+  padding: 5px 10px;
+  font-family: verdana;
+  font-size: 11px;
+  font-style: italic;
+  color: #ae9b36;
+}
+
+.code:before {
+  content: 'Code:';
+  margin-bottom: 5px;
+  display: block;
+  border-bottom: 1px solid #ae9b36;
+}
+
+.code pre {
+  margin: 0;
+  overflow: hidden;
+  display: block;
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+
+.code code {
+  color: #16bbc6;
+}
+
