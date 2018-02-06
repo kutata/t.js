@@ -5,71 +5,91 @@
 <title>😂Hi, I'm kutata.</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="stylesheet" href="tea.css" />
-<link rel="stylesheet" href="sample.css" />
 <link rel="stylesheet" href="code.css" />
+<script src="t.js"></script>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1><img src="tea.png" />
-      <span>Hi, I'm kutata. 😂</span></h1>
-      <p>thanks for your time to looking this. :D
-    </header>
+  <header>
+    <div class="header-content">
+      <h1>
+        <img src="tea.png" />
+        <span>Hi, I'm kutata. 😂</span>
+      </h1>
+      <p>thanks for your time to looking this. :D</p>
+    </div>
+  </header>
 
-    <hr />
-
+  <div class="main">
     <section>
-      <h2>DOM selector:</h2>
+      <h2>Selector:</h2>
 
-      <div>
-        <dl>
-          <dt>#id</dt>
-          <dd>
-            <div id="a">#a</div>
-          </dd>
-          <dd class="code">
-          <code>console.log(t('#a').length); // 1</code>
-          </dd>
-        </dl>
-
-        <dl>
-          <dt>.class</dt>
-          <dd>
-            <div class="b">.b</div>
-            <div class="b">.b</div>
-          </dd>
-          <dd class="code">
-          <pre><code>console.log(t('.b').length); // 2</code></pre>
-          </dd>
-        </dl>
-
-        <dl>
-          <dt>find &amp; &gt; .b</dt>
-          <dd>
-            <div class="c">
-              <div class="d">
-                immediate children .d
-              </div>
-              <div class="e">
-                <div class="d">children .d</div>
-              </div>
-            </div>
-            </dd>
-
-            <dd class="code block"> <!-- holy fix 😅 -->
-          <p class="comment">// notice: yellow is .c, deeppink is .e, green is .d</p>
-          <pre><code>console.log(t('.c').find('.d').length); // 2
-console.log(t('.c').find('> .d').length); // 1</code></pre>
-          </dd>
-        </dl>
+      <div class="demo">
+        <div id="r">
+          <div class="g"></div>
+          <div class="b">
+            <div class="g"></div>
+          </div>
+        </div>
       </div>
+
+      <figure class="code js">
+        <pre class="comment">// #r is red
+// .g is green
+// .b is blue</pre>
+         <pre><code>console.log(t('#r').length); // 1
+console.log(t('.g').length); // 2
+console.log(t('#r > .g').length); // 1</code></pre>
+      </figure>
     </section>
 
-    <hr />
+    <section>
+      <h2>Selector:</h2>
+      <div class="demo">
+      <p>
+        <div id="r">
+          <div class="g"></div>
+          <div class="b">
+            <div class="g"></div>
+          </div>
+        </div>
+      </p>
+      </div>
 
-    <footer>
-      kutata &copy; 2017
-    <footer>
+      <figure class="code js">
+        <pre class="comment">// #r is red
+// .g is green
+// .b is blue</pre>
+         <pre><code>console.log(t('#r').length); // 1
+console.log(t('.g').length); // 2
+console.log(t('#r > .g').length); // 1</code></pre>
+      </figure>
+    </section>
+
   </div>
+
+  <footer>
+    <div class="footer-content">
+      kutata &copy; 2017
+    </div>
+  </footer>
+
+  <style>
+#r {
+  padding: 10px;
+  background-color: red;
+  display: inline-block;
+}
+
+.g {
+  margin: 10px;
+  padding: 10px;
+  background-color: green;
+}
+
+.b {
+  padding: 10px;
+  background: blue;
+}
+  </style>
 </body>
 </html>

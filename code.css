@@ -1,29 +1,54 @@
-.code {
-  display: inline-block;
-  background: #181d22;
-  padding: 5px 10px;
-  font-family: verdana;
+.demo {
+  position: relative;
+  padding: 20px;
+  margin-bottom: 10px;
+  border: 1px solid #eee;
   font-size: 11px;
+}
+
+.demo:before {
+  content: 'DEMO';
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  margin-bottom: 5px;
+  display: block;
+  border-bottom: 1px solid #ae9b36;
+  text-align: right;
   font-style: italic;
   color: #ae9b36;
 }
 
+figure {
+  position: relative;
+  display: block;
+  margin: 0;
+  overflow-x: scroll;
+}
+
+.code {
+  background-color: #f8f8f8;
+  padding: 5px 10px;
+  padding: 20px;
+  font-size: 11px;
+  color: #ae9b36;
+}
+
+.code.js:before {
+  content: 'JS';
+}
+
 .code:before {
-  content: 'Code:';
+  position: absolute;
+  top: 5px;
+  right: 10px;
   margin-bottom: 5px;
   display: block;
   border-bottom: 1px solid #ae9b36;
-}
-
-.code pre {
-  margin: 0;
-  overflow: hidden;
-  display: block;
-  white-space: pre-line;
-  word-wrap: break-word;
+  text-align: right;
+  font-style: italic;
 }
 
 .code code {
-  color: #16bbc6;
+  color: #2973b7;
 }
-
