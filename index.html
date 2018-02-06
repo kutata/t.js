@@ -41,30 +41,6 @@ console.log(t('.g').length); // 2
 console.log(t('#r > .g').length); // 1</code></pre>
       </figure>
     </section>
-
-    <section>
-      <h2>Selector:</h2>
-      <div class="demo">
-      <p>
-        <div id="r">
-          <div class="g"></div>
-          <div class="b">
-            <div class="g"></div>
-          </div>
-        </div>
-      </p>
-      </div>
-
-      <figure class="code js">
-        <pre class="comment">// #r is red
-// .g is green
-// .b is blue</pre>
-         <pre><code>console.log(t('#r').length); // 1
-console.log(t('.g').length); // 2
-console.log(t('#r > .g').length); // 1</code></pre>
-      </figure>
-    </section>
-
   </div>
 
   <footer>
@@ -74,22 +50,20 @@ console.log(t('#r > .g').length); // 1</code></pre>
   </footer>
 
   <style>
-#r {
-  padding: 10px;
-  background-color: red;
-  display: inline-block;
-}
-
-.g {
-  margin: 10px;
-  padding: 10px;
-  background-color: green;
-}
-
-.b {
-  padding: 10px;
-  background: blue;
-}
+    #r {
+      padding: 10px;
+      background-color: red;
+      display: inline-block;
+    }
+    .g {
+      margin: 10px;
+      padding: 10px;
+      background-color: green;
+    }
+    .b {
+      padding: 10px;
+      background: blue;
+    }
   </style>
 </body>
 </html>
